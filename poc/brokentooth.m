@@ -208,7 +208,7 @@ void try_to_add_callback(void * address, long value)
 }
 
 void trigger() {
-    try_to_add_callback((void *)CALLBACK_ADDRESS, CALLBACK_ADDITIONAL_DATA);
+    try_to_add_callback((void *)CALLBACK_ADDRESS, 0);
 }
 
 
