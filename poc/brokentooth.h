@@ -2,8 +2,8 @@
 //  brokentooth.h
 //  brokentooth
 //
-//  Created by Omer Porzecanski on 02/09/2018.
-//  Copyright © 2018 Omer Porzecanski. All rights reserved.
+//  Created by @omerporze on 02/09/2018.
+//  Copyright © 2018 omerporze. All rights reserved.
 //
 //  Credits to @raniXCH for his POC code and @SparkZheng for finding the CVE and publishing the lecture.
 //
